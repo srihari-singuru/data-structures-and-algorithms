@@ -7,6 +7,16 @@
 # BlueJ files
 *.ctxt
 
+# IntelliJ files
+.idea
+out/
+target/
+.settings/
+.classpath
+.project
+.gradle/
+build/
+
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
