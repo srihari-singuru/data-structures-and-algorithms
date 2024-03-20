@@ -13,7 +13,7 @@ public class A_IsNumberPalindrome {
         }
 
         // Considering the tree structure, total nodes = log(number of levels) + 1
-        int totalDigits = (int) Math.floor(Math.log10(number) + 1);
+        int totalDigits = (int) Math.floor(Math.log10(number)) + 1;
         // Prepare a masked number like 100000
         int maskedNumber = (int) Math.pow(10, totalDigits - 1.0);
 
