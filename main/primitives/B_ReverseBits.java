@@ -1,4 +1,4 @@
-package main;
+package main.primitives;
 
 public class B_ReverseBits {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package main;
+package main.primitives;
 
 public class A_IsNumberPalindrome {
     public static void main(String[] args) {
