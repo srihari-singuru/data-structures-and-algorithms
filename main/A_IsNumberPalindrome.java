@@ -4,10 +4,11 @@ public class A_IsNumberPalindrome {
     public static void main(String[] args) {
         // Check if a given number is a Palindrome or not
         int num = 123321;
-        System.out.println("Is Palindrome: "+isNumberPalindrome(num));
+        System.out.println("Is Palindrome: "+isNumberPalindrome1(num)+" : Approach #1");
+        System.out.println("Is Palindrome: "+isNumberPalindrome2(num)+" : Approach #2");
     }
 
-    private static boolean isNumberPalindrome(int number) {
+    private static boolean isNumberPalindrome1(int number) {
         if (number < 0) {
             return false;   // return false if the number is negative
         }
@@ -33,5 +34,22 @@ public class A_IsNumberPalindrome {
         }
 
         return true;
+    }
+
+    private static boolean isNumberPalindrome2(int number) {
+        if (number < 0) {
+            return false;   // return false if the number is negative
+        }
+
+        int result = 0;
+        int initial = number;
+        while (initial != 0) {
+            result = result * 10;   // if it is 2, then make it 20 to add lsd
+            int lsd = initial % 10;
+            result = result + lsd;  // add lsd. 20 +  x
+            initial = initial / 10; // remove the lsd for the initial
+        }
+
+        return result == number;
     }
 }
