@@ -46,7 +46,7 @@ public class E_ChangeTheBase {
         // 3 % 2 = 1 then 3 / 2 = 1
         // 1 % 2 = 1 then 1 / 2 = 0
 
-        return integerToToBase(intResult / toBase, toBase) + c;
+        return integerToToBase(intResult / toBase, toBase) + c; // string concatenation
     }
 
     private static char placeValueToChar(int v) {
