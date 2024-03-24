@@ -43,16 +43,16 @@ public class A_Rotate2DMatrix {
         int lastIndex = matrix.length - 1;
         for (int layer = 0; layer < (matrix.length / 2); layer++) {
             for (int j = layer; j < lastIndex - layer; j++) {
-                int topLeft = matrix[layer][j];
-                int bottomLeft = matrix[lastIndex - j][layer];
-                int topRight = matrix[j][lastIndex - layer];
-                int bottomRight = matrix[lastIndex - layer][lastIndex - j];
+                int top = matrix[layer][j];
+                int right = matrix[j][lastIndex - layer];
+                int bottom = matrix[lastIndex - layer][lastIndex - j];
+                int left = matrix[lastIndex - j][layer];
 
                 // after finding the four corners, move them
-                matrix[layer][j] = bottomLeft;
-                matrix[lastIndex - j][layer] = bottomRight;
-                matrix[j][lastIndex - layer] = topLeft;
-                matrix[lastIndex - layer][lastIndex - j] = topRight;
+                matrix[layer][j] = left;
+                matrix[j][lastIndex - layer] = top;
+                matrix[lastIndex - layer][lastIndex - j] = right;
+                matrix[lastIndex - j][layer] = bottom;
             }
         }
         return matrix;
